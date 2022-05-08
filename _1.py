@@ -108,3 +108,109 @@
 # print(randrange(0, 5, 1), end=' ')
 # print(randint(0, 2))
 
+##Sensores alarma
+    # sensor --> puerta abierta = True 
+    # sensor --> ventana abierta = fal
+# puerta = True
+# ventana = True
+
+# if puerta or not(ventana):          #negación 
+#     print("Alarma encendida")
+# else:
+#     print("Alarma apagada")
+
+
+
+
+#Solución simple, con función, con llamada de función externa, recursividad, modulos
+#PESO de libra a kilos.
+# libra = 2
+# libraEnKilos = 0.453592
+# libraAKilos = libra * libraEnKilos
+# print(libraAKilos)
+# #raiz
+# a = int(input("Numero 1"))
+# b = int(input("Numero 2"))
+# c = (a**2 + b**2)**0.5  
+# print (c)       
+# #millas kilometros
+# 1 milla son 1.60934 kilómetros 
+# 1 kilómetro es 0.621371 milla
+
+
+#NUMERO MAYOR Y MENOR
+
+# canNumero = int(input("ingrese el primer numero :\n"))
+# for i in range(1, canNumero+1):
+#     numero = int(input(f"ingrese el numero {i} \n"))
+#     if i == 1:
+#         menor = numero
+#     else: 
+#         if numero < menor:
+#             menor = numero
+# print(f"El menor de los {canNumero} es {menor}")
+
+#Convertir notas de 1 a 5 con decimal a letras. 1-2.9=D; 3-3.5=R, 3.6-4=B; 4.1-5=E
+# notaObtenida = float(input("Ingrese la nota a convertir."))
+
+#EJERCICIO
+#Encontrar la énesima potencia a que se debe elevar x para que sea igual a y
+# def matematicoPereirano(x,y)->bool:
+#     n = 1
+    
+#     if y <= 1:
+#         return f"ingresó el valor {y}, el número debe ser superior a 1 y mayor a {x}."
+        
+#     for i in range(y):
+        
+#         if n < y:
+#             n*= x
+#         elif n == y:
+#             return True
+#         else:
+#             return False
+
+# x = int(input("Ingrese el número que elevado a la énesima potencia puede ser igual a 'y'.\n"))
+# y = int(input("Ingrese el número que debe ser igual a 'x' elevado a la énesima potencia.\n"))
+# matematicoPereirano(x,y)
+# print(matematicoPereirano(x, y))
+
+
+# EJERCICIO 2
+# Clasificar chocolates
+# def palidromo(numero:int)->bool:        #El simbolo -> cambia el retorno de la función.
+#     centena=numero//100
+#     decena=(numero-centena*100)//10
+#     unidad=numero-centena*100-decena*10
+
+#     if centena == unidad:
+#         resultado = True
+#     else:
+#         resultado = False
+#     return resultado
+
+# def espar(numero:int)->bool:
+#     if numero % 2 == 0:
+#         resultado = True
+#     else:
+#         resultado = False
+#     return resultado
+
+# def clasificar_chocolate(codigo:int)->str:
+#     if palidromo(codigo):
+#         if espar(codigo):
+#             resultado = "SWEET"
+#         else:
+#             resultado = "BITTER"
+#     else:
+#         if espar(codigo):
+#             resultado = "CINNAMON"
+#         else:
+#             resultado = "LIGHT"
+#     return resultado            
+
+# print(clasificar_chocolate(123))
+# print(clasificar_chocolate(222))   
+# print(clasificar_chocolate(111))
+# print(clasificar_chocolate(505)) 
+# print(clasificar_chocolate(576)) 
