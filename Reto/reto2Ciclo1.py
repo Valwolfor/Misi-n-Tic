@@ -36,21 +36,12 @@ def cliente(informacion:dict)->dict:
     salida = {
         "nombre": informacion["nombre"],
         "edad": informacion["edad"],
-        "atracción": atraccion,
+        "atraccion": atraccion,
         "apto": apto,
         "primer_ingreso": informacion["primer_ingreso"],
         "total_boleta": total_boleta
     }
     return  salida
-
-#informacion["primer_ingreso"], #Solo en caso de 0, sino después del '#' == True.
-#Dejo el dicionario, pero creo que no se debe dejar.
-informacion = {
-    "id_cliente": 1, 
-    "nombre": "Diego",
-    "edad": 2,
-    "primer_ingreso": False         #Ojo aquí con el 0
-    }
 
 cliente(informacion)
 print(cliente(informacion))
