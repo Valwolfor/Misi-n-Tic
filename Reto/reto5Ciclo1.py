@@ -9,14 +9,16 @@ rutaFileCsv = "https://raw.githubusercontent.com/luisguillermomolero/MisionTIC20
 
 #función. 
 def listaPeliculas(rutaFileCsv:str)->str :
+    #Función para llamar archivo filtrando y contruir los elementos solicitados.
+    try:
+        datosCsv = pd.read_csv(rutaFileCsv, sep = ',')
+    except:
+        print("Error al leer el archivo de datos.")
+    tablaResultado = pd.DataFrame(data = datosCsv, columns = ["Country", "Languages", "Gross Earnings"])
+    tablaResultado.to_csv("tablaResultado", sep = ',')
+    tablaResultado = pd.read_csv(rutaFileCsv, sep = ',')
     
-    import numpy as np
-    
-    datosCsv = pd.read_csv(rutaFileCsv, sep = ',') #index_col = ["Country", "Languages", "Gross Earnings"]
-    
-    # tablaResultado = pd.DataFrame(data = datosCsv, columns = ["Country", "Languages", "Gross Earnings"])
-    
-    print(datosCsv)
+    print(tablaResultado)
 
 listaPeliculas(rutaFileCsv)
 print(listaPeliculas)
