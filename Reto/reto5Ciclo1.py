@@ -1,7 +1,7 @@
 #Se necesita organizar una información por cierto criterios y tomando una muestra.
 
+from operator import index
 import pandas as pd
-
 pd.options.display.max_rows=10  #Especificación para configurar pandas en un maximo de rows
 
 #ruta file csv
@@ -10,15 +10,11 @@ rutaFileCsv = "https://raw.githubusercontent.com/luisguillermomolero/MisionTIC20
 #función. 
 def listaPeliculas(rutaFileCsv:str)->str :
     #Función para llamar archivo filtrando y contruir los elementos solicitados.
-    try:
-        datosCsv = pd.read_csv(rutaFileCsv, sep = ',')
-    except:
-        print("Error al leer el archivo de datos.")
-    tablaResultado = pd.DataFrame(data = datosCsv, columns = ["Country", "Languages", "Gross Earnings"])
-    tablaResultado.to_csv("tablaResultado", sep = ',')
-    tablaResultado = pd.read_csv(rutaFileCsv, sep = ',')
+    # try:
+    datosCsv = pd.read_csv(rutaFileCsv, sep = ',',index_col = ["Country", "Language"], usecols = ["Country", "Language", "Gross Earnings"])
+    # except:
     
-    print(tablaResultado)
+    print(datosCsv)
 
 listaPeliculas(rutaFileCsv)
 print(listaPeliculas)
