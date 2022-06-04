@@ -1,6 +1,8 @@
 #Se necesita organizar una información por cierto criterios y tomando una muestra.
 
+
 import pandas as pd
+
 
 #ruta file csv
 rutaFileCsv = "https://github.com/luisguillermomolero/MisionTIC2022_2/blob/master/Modulo1_Python_MisionTIC2022_Main/Semana_5/Reto/movies.csv?raw=true"
@@ -14,13 +16,24 @@ def listaPeliculas(rutaFileCsv:str)->str :
     if "csv" in validador[-1]:
         
         try:
+            datosCompletos = pd.read_csv(rutaFileCsv, sep = ',')
             datosCsv = pd.read_csv(rutaFileCsv, sep = ',', usecols = ["Country", "Language", "Gross Earnings"])
-            tablaGanancias = pd.pivot_table(datosCsv, index = ["Country", "Language"])
-            return tablaGanancias.head(10)
+            subconjunto = datosCompletos["Country", "Language", "Gross Earnings"]
+            print(subconjunto)
         except:
-            return f"Error al leer el archivo de datos."
+            print("Error al leer el archivo de datos.")
     else:
-        return f"Extensión inválida."
+        print("Extensión inválida.")
     
-#Llamado de la función con impresión, esta vaina no deja pasar si no es print.
-print(listaPeliculas(rutaFileCsv))
+    #convertirla en tabla dinamica. 
+    # tablaDinamica = pd.pivot_table(datosCsv, index = ["Country", "Language"])
+    #tomar solo 10 datos del total de la tabla. 
+    # tablaDinamica = tablaDinamica.head(10) 
+    
+    # listaResultado = pd.unique(list(map(lambda x: x[0])))
+    # print(datosCsv)
+    # print(tablaDinamica)
+    # print(listaResultado)
+
+listaPeliculas(rutaFileCsv)
+
