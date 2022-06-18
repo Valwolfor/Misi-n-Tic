@@ -13,6 +13,8 @@ class aplicacion:
         self.btnDecr = tk.Button(self.ventana, text= "Decrementar", command = self.decrementar)   #command puede llamar un metodo o función, y los botones reciben eventos que generan una acción.  en este caso command llamando el método según. 
         self.btnDecr.grid(row=1, column=2)# esta en la columna 3(2) porque el primer botón está en la columna 1(0) y en la segunda columna está 2(el contador, 1)
         
+        
+        
         self.ventana.mainloop() #inicia la ventana
         
         
