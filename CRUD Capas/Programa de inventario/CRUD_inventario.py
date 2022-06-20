@@ -1,4 +1,4 @@
-#Librería con la lógica de las operaciones CRUD
+#Librería con la lógica de las operaciones CRUD hermoso
 ###############################################
 
 #Para poder utilizar el archivo json que es el que tiene los datos. 

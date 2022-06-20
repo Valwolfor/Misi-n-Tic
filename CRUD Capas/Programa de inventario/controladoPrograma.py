@@ -1,4 +1,4 @@
-#Aplicación CRUD (Controlador) - Lista de Tareas Pendientes
+#Aplicación CRUD (Controlador) - Productos de inventario Tonika Disco-Bar
 ###########################################################
 
 #Librerías (capas)

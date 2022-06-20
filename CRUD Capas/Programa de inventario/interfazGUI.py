@@ -1,4 +1,4 @@
-#Librería para interacción por consola (interfaz)
+#Librería para interacción por consola (interfaz no ejecutable)
 #################################################
 
 #Librerías con las clases para construir los widgets (ventanas, botones, cambos, labels, etc)
