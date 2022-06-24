@@ -9,7 +9,7 @@ def Create(producto, identificador, productoNuevo):
     producto[identificador] = productoNuevo #Mutación del diccionario por referencia      
 
 #Consultar la información de todas las tareas (Read)
-def Read(rutaArchivo='listadoProductos.json'):
+def Read(rutaArchivo='C:/Users/BMO/OneDrive/Documentos/Misión TIC/Practicas/Ciclo 1/CRUD Capas/Programa de inventario/listadoProductos.json'):
 
     #Cargar el listado de tareas a un diccionario desde la capa de datos (archivo JSON)    
     diccionarioProductos = {}#Contenedor del listado de tareas que gestiona la App

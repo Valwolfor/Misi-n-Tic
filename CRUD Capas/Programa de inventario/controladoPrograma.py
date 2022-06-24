@@ -10,7 +10,7 @@ import sys #API para comunicar la App con funciones del sistema operativo
 
 #Carga de la base de datos de la aplicación (archivo json)
 productos = CRUD.Read()
-if not(productos): #Si no se obtiene el listado de tareas del archivo json (Base de Datos)
+if not(productos): #Si no se obtiene el listado de productos del archivo json (Base de Datos)
     sys.exit(1) #Terminación de la App reportando error
 
 ############################################################################################

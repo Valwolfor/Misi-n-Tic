@@ -16,7 +16,7 @@ def generarTablaListadoProductos(marcoInteraccion,producto):
     TablaProductos = ttk.Treeview(marcoInteraccion)
 
     #Especificación de las columnas
-    TablaProductos['columns'] = ('Nombre', 'Cantidad', 'Costo', 'En nevera', 'En almancen')
+    TablaProductos['columns'] = ('Nombre', 'Cantidad', 'Costo', 'En nevera', 'En almacen')
     TablaProductos.column('Nombre', width=0, stretch=tk.NO)
     TablaProductos.column('Cantidad', anchor=tk.CENTER, width=100)
     TablaProductos.column('Costo', anchor=tk.W, width=300)
@@ -33,7 +33,7 @@ def generarTablaListadoProductos(marcoInteraccion,producto):
     #Insertar el listado de productos cargado en memoria proveniente de la capa de datos en la tabla
     indiceNumerico = 0
     for identificador, producto in producto.items():
-        TablaProductos.insert(parent='', index=indiceNumerico, iid=indiceNumerico, text='', values=(identificador, producto['Nombre'], producto['Cantidad'], producto['Costo'], producto['En nevera'], producto['En almacen']) )
+        TablaProductos.insert(parent='', index=indiceNumerico, iid=indiceNumerico, text='', values=(identificador, producto['Cantidad'], producto['Costo'], producto['En nevera'], producto['En almacen']) )
         indiceNumerico += 1       
 
     #Retornar el objeto para las actualizaciones que se generen por los eventos
@@ -244,7 +244,7 @@ def ventanaMenuPrincipal(producto):
     #Proporciones de la imagen
     w = 140 
     h = 140   
-    imagenCargada = Image.open("logoTonika.jpg")#Carga de la imagen
+    imagenCargada = Image.open("C:/Users/BMO/OneDrive/Documentos/Misión TIC/Practicas/Ciclo 1/CRUD Capas/Programa de inventario/logoTonika.jpg")#Carga de la imagen
     imagenCargada.thumbnail((w,h))#Redimensionado de la imagen a las proporciones establecidas
     imagenDiscoBar = ImageTk.PhotoImage(imagenCargada)#Encapsular para tkinter
     #Creación de la etiqueta 
